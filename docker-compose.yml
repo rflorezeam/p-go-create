@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  libro-create:
+    build: .
+    container_name: libro-create
+    ports:
+      - "8081:8081"
+    networks:
+      - libro-network
+
+networks:
+  libro-network:
+    external: true 
